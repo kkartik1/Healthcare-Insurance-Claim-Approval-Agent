@@ -1,0 +1,43 @@
+Create the below modules based on the attached data files:
+Modele1:
+Dataset Loading 
+• Load all required input files (standard JSON files):
+o reference_codes.json (ICD-10 and CPT code mappings)
+o validation_records.json & test_records.json (patient records)
+o insurance_policies.json (policy documents)
+Module2 
+Tool Definitions & Implementations 
+• Define & implement the following tools:
+o summarize_patient_record(record_str)
+o summarize_policy_guideline(policy_id)
+o check_claim_coverage(record_summary, policy_summary)
+• Ensure that each tool adheres to the specifications outlined in the project description, including output format and structure.
+Modue3 
+System Instruction Prompt 
+• Implement a system instruction prompt that:
+o Clearly defines the three tools available to the agent
+o Specifies the workflow sequence the agent must follow
+o Enforces the correct output format (Decision and Reason)
+Module4 
+LLM Integration 
+• Use the selected LLM (e.g., gpt-4o-mini) using a LangChain-compatible setup.
+5 Agent Creation Create a ReAct-style single agent using LangGraph: 
+• Option 1: Manually construct the agent with defined logic 
+• Option 2: Use the built-in create_react_agent() method with proper configuration
+Module6 
+Agent Experimentation & Validation
+• For each patient record in validation_records.json, send the input to the agent
+• Note and analyze the agent’s response, and ensure that everything is functioning as expected.
+• Load the human reference responses from the validation_reference_results.csv file
+• Evaluate your agent using manual inspection or by applying simple “LLM as a Judge” prompting to compare the agent’s response with the human 
+reference response.
+• Adjust and improve your agent accordingly
+Module7 
+Testing 
+• Generate agent responses for the patients in test_records.json and store them in the format described in the following section.
+
+Final Output
+Your final output file must be named submission.csv and should contain the generated agent responses for the test dataset (test_records.json). This file will be used to evaluate your agent's performance.
+● A sample file with blank responses is provided to you (submission.csv) for reference as depicted in the attached file.
+
+Also attached is an example python scripts regarding what should be the coding style.
